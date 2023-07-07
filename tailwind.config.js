@@ -23,5 +23,6 @@ export default  {
       },
     },
   },
+  assetsInclude: ["./src/assets/*.png"],
   plugins: [],
 };
