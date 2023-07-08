@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { styles } from "../styles";
-import { navLinks } from "../constants";
-import { oluHigh2, menu, close } from "../assets";
+import { styles } from "../../styles";
+import { navLinks } from "../../constants";
+import { oluHigh2, menu, close } from "../../assets";
 // import {olu} from "../assets/olu.svg";
 
 const Navbar = () => {
