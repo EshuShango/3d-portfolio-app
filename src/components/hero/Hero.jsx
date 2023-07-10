@@ -31,7 +31,7 @@ const Hero = () => {
             className={`${styles.heroSubText}
           mt-2 text-white-100`}
           >
-            I&apos;m a Creative thinker, self driven{" "}
+            Creative thinker, self driven{" "}
             <br className="sm: block hidden" /> and capable humane being.
           </p>
         </div>
