@@ -16,9 +16,46 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    // from emailjs.com... info needed to enable email sending
+    //template_kbv23c5
+    //service_ngop168
+    //QrBwNH83BbAzG_q8K
+    emailjs
+      .send(
+        "service_ngop168",
+        "template_kbv23c5",
+        {
+          from_name: form.name,
+          to_name: "Olu",
+          from_email: form.email,
+          to_email: "olutakinyemi@gmail.com",
+          message: form.message,
+        },
+        "QrBwNH83BbAzG_q8K"
+      )
+      .then(() => {
+        setLoading(false);
+        alert("Message sent successfully!");
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+      }, (error) => {
+        setLoading(false);
+        alert("Message failed to send!");
+        console.log(error.text);
+      });
+  };
 
   return (
     <div
@@ -71,20 +108,21 @@ const Contact = () => {
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
-          <button 
-
-          type="submit"
-          className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
-          >{loading ? "Sending..." : "Send"}</button>
+          <button
+            type="submit"
+            className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+          >
+            {loading ? "Sending..." : "Send"}
+          </button>
         </form>
       </motion.div>
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
-          <EarthCanvas />
-        </motion.div>
-
+        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+      >
+        <EarthCanvas />
+      </motion.div>
     </div>
   );
 };
