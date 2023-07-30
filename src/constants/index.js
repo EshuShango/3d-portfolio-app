@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
   mobile,
   backend,
@@ -19,7 +20,7 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
+  weatherApp,
   jobit,
   tripguide,
   threejs,
@@ -199,27 +200,28 @@ const testimonials = [
 ];
 
 const projects = [
-  // {
-  //   name: "Car Rent",
-  //   description:
-  //     "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-  //   tags: [
-  //     {
-  //       name: "react",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "mongodb",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "tailwind",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: carrent,
-  //   source_code_link: "https://github.com/",
-  // },
+  {
+    name: "Weather Forecast App",
+    description:
+      "Web application that allows user to search the weather forecast for a specific city.",
+
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: weatherApp,
+    source_code_link: "https://github.com/EshuShango/weather-forecast-app",
+  },
   // {
   //   name: "Job IT",
   //   description:
