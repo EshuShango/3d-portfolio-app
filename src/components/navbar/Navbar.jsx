@@ -8,6 +8,13 @@ import { oluHigh2, menu, close } from "../../assets";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
@@ -44,7 +51,13 @@ const Navbar = () => {
                 font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`{#${link.id}}`}>{link.title}</a>
+              <Link 
+              to={`#${link.id}`}
+              onClick={() => {
+                setActive(link.title);
+                scrollToSection(link.id);
+              }}
+              >{link.title}</Link>
             </li>
           ))}
         </ul>
@@ -70,9 +83,12 @@ const Navbar = () => {
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(link.title);
+                    
                   }}
                 >
-                  <a href={`{#${link.id}}`}>{link.title}</a>
+                  <Link 
+                  to={`#${link.id}`}
+                  >{link.title}</Link>
                 </li>
               ))}
             </ul>

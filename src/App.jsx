@@ -1,4 +1,6 @@
+// import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
+// import { ModelField } from "./components/ModelField";
 import {
   About,
   Contact,
@@ -15,17 +17,26 @@ const App = () => {
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
         <div className=" bg-cover bg-no-repeat bg-center">
-          <Navbar/> 
-          <Hero/>
+          {/* <Navbar >
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        
+      </Switch>
+       </Navbar> */}
+          <Navbar />
+          <Hero />
+          {/* <ModelField /> */}
         </div>
-        <About/>
-        <Experience/>
-        <Tech/>
-        <Works/>
-        <Feedbacks/>
+        <About />
+        <Experience />
+        <Tech />
+        <Works />
+        <Feedbacks />
         <div className="relative z-0">
-          <Contact/>
-          <StarsCanvas/>
+          <Contact />
+          <StarsCanvas />
         </div>
       </div>
     </BrowserRouter>
