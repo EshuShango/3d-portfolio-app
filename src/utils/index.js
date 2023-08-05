@@ -1,12 +1,12 @@
-
-import Loader from './Loader';
-// import motion from './motion';
-import { fadeIn, textVariant } from './motion';
+import CanvasLoader from "./Loader";
+import { fadeIn, textVariant } from "./motion";
+import useMobile from "./isMobile";
 
 export default {
- Loader,
- motion,
- fadeIn,
-  textVariant,  
-}
-//? How to make it work
+  CanvasLoader,
+  motion,
+  fadeIn,
+  textVariant,
+  useMobile
+};
+

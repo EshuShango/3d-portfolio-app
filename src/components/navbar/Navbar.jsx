@@ -8,11 +8,11 @@ import { oluHigh2, menu, close } from "../../assets";
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
-  
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
   return (
@@ -51,13 +51,15 @@ const Navbar = () => {
                 font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-              <Link 
-              to={`#${link.id}`}
-              onClick={() => {
-                setActive(link.title);
-                scrollToSection(link.id);
-              }}
-              >{link.title}</Link>
+              <Link
+                to={`#${link.id}`}
+                onClick={() => {
+                  setActive(link.title);
+                  scrollToSection(link.id);
+                }}
+              >
+                {link.title}
+              </Link>
             </li>
           ))}
         </ul>
@@ -83,12 +85,17 @@ const Navbar = () => {
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(link.title);
-                    
                   }}
                 >
-                  <Link 
-                  to={`#${link.id}`}
-                  >{link.title}</Link>
+                  <Link
+                    to={`#${link.id}`}
+                    onClick={() => {
+                      setActive(link.title);
+                      scrollToSection(link.id);
+                    }}
+                  >
+                    {link.title}
+                  </Link>
                 </li>
               ))}
             </ul>
