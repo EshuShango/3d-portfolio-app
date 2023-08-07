@@ -22,7 +22,7 @@ export const useMobile = () => {
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
-  }, []);
+  }, [isMobile]);
 
   // return isMobile;
 };

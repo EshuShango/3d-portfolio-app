@@ -1,4 +1,8 @@
+import React from "react";
+
 import { Tilt } from "react-tilt";
+
+import { ReactDOM } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../../styles";
@@ -8,10 +12,11 @@ import { projects } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
 
 const ProjectCard = (
-  {index,
+  
+ {index,
   name,
-  description,
   tags,
+  description,
   image,
   source_code_link}
 ) => {
@@ -53,11 +58,11 @@ const ProjectCard = (
           </div>  
 
           <div className="mt-4 flex flex-wrap gap-2">
-            {tags.map((tag) => (
+            {tags.map((tag ) => (
               <p key={tag.name} className={`text-[14px] ${tag.color}`}>
                 #{tag.name}
               </p>
-            ))}
+            ))} 
             </div>
       </Tilt>
     </motion.div>
