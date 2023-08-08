@@ -23,9 +23,6 @@ dependencies:
   react:
     specifier: ^18.2.0
     version: 18.2.0
-  react-dom:
-    specifier: ^18.2.0
-    version: 18.2.0(react@18.2.0)
   react-router-dom:
     specifier: ^6.14.1
     version: 6.14.1(react-dom@18.2.0)(react@18.2.0)
@@ -67,6 +64,9 @@ devDependencies:
   postcss:
     specifier: ^8.4.25
     version: 8.4.25
+  react-dom:
+    specifier: ^18.2.0
+    version: 18.2.0(react@18.2.0)
   react-tilt:
     specifier: ^1.0.2
     version: 1.0.2(@types/react-dom@18.2.6)(@types/react@18.2.14)(react-dom@18.2.0)(react@18.2.0)

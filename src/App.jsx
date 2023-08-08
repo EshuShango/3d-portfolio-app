@@ -1,5 +1,6 @@
 // import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
+// import   ErrorBoundary   from "./utils/index";
 // import { ModelField } from "./components/ModelField";
 import {
   About,
@@ -14,20 +15,12 @@ import {
 } from "./components";
 const App = () => {
   return (
+    // <ErrorBoundary >
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
         <div className=" bg-cover bg-no-repeat bg-center">
-          {/* <Navbar >
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-        
-      </Switch>
-       </Navbar> */}
           <Navbar />
           <Hero />
-          {/* <ModelField /> */}
         </div>
         <About />
         <Experience />
@@ -40,6 +33,7 @@ const App = () => {
         </div>
       </div>
     </BrowserRouter>
+    // </ErrorBoundary>
   );
 };
 
