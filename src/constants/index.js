@@ -169,7 +169,7 @@ const technologies = [
 
 const experiences = [
   {
-    id: 0,
+   
     title: "React.js Developer",
     company_name: "Starbucks",
     icon: starbucks,
@@ -183,7 +183,7 @@ const experiences = [
     ],
   },
   {
-    id: 1,
+    
     title: "React Native Developer",
     company_name: "Tesla",
     icon: tesla,
@@ -197,7 +197,7 @@ const experiences = [
     ],
   },
   {
-    id: 2,
+    
     title: "Web Developer",
     company_name: "Shopify",
     icon: shopify,
@@ -211,7 +211,7 @@ const experiences = [
     ],
   },
   {
-    id: 3,
+    
     title: "Full stack Developer",
     company_name: "Meta",
     icon: meta,

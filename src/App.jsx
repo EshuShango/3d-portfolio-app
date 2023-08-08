@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 // import   ErrorBoundary   from "./utils/index";
 // import { ModelField } from "./components/ModelField";
 import {
-  About,
+  // About,
   Contact,
   Experience,
   Feedbacks,
@@ -17,12 +17,12 @@ const App = () => {
   return (
     // <ErrorBoundary >
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
+       <div className="relative z-0 bg-primary">
         <div className=" bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />
         </div>
-        <About />
+        {/* <About /> */}
         <Experience />
         <Tech />
         <Works />
@@ -31,7 +31,7 @@ const App = () => {
           <Contact />
           <StarsCanvas />
         </div>
-      </div>
+      </div> 
     </BrowserRouter>
     // </ErrorBoundary>
   );

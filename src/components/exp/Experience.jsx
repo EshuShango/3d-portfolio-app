@@ -6,26 +6,27 @@ import {
 import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../../styles";
-import  {experiences}  from "../../constants";
+import { experiences } from "../../constants";
 import { SectionWrapper } from "../../hoc";
 import { textVariant } from "../../utils/motion";
 
-
-
-
-const expPoints = () => {
-  // for(let index of experiences)
-   for (const  exp of experiences){
-    console.log( exp)
-    return (  
-      <div
-      key={exp.id}
-      >{exp.id}</div>
-    )
-  }
-}
-export const ExperienceCard = (experience) => (
-  
+// const expPoints = () => {
+//   // for(let index of experiences)
+//   for (const exp of experiences) {
+//     console.log(exp);
+//     return <div key={exp.id}>{exp.id}</div>;
+//   }
+// };
+export const ExperienceCard = ({
+  experience,
+  iconBg,
+  date,
+  icon, 
+  company,
+  title,
+  company_name,
+  points,
+}) => (
   <VerticalTimelineElement
     contentStyle={{ background: "#1d1836", color: "#fff" }}
     contentArrowStyle={{ borderRight: "7px solid #232631" }}
@@ -58,28 +59,29 @@ export const ExperienceCard = (experience) => (
     </div>
 
     <ul className="mt-5 list-disc ml-5 space-y-2">
-      {/* ? safe navigation operators */}
       {console.log(experiences)}
-      {/* write a for let as a function */}
-      
-      {expPoints(experiences)}
-
-r
-      {/* {experience?.points?.map((index, point) => (
-        console.log("HEY"),
-        console.log(point, index),
-          <li
-            key={`experience-point${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
-          >
-           
-
-            {point}
-          </li>
-
-        ))} */}
+      {console.log(experience)}
+      {/* ? safe navigation operators */}
+      {/* 
+     
+      {expPoints(experiences)} 
+      experience?.points?.map
+      */}
+      {experiences.map(
+        (experiences, index) => (
+          console.log("HEY"),
+          console.log(index),
+          (
+            <li
+              key={index}
+              className="text-white-100 text-[14px] pl-1 tracking-wider"
+            >
+              {index}
+            </li>
+          )
+        )
+      )}
     </ul>
-    
   </VerticalTimelineElement>
 );
 
