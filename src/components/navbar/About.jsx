@@ -7,10 +7,10 @@ import { services } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
 import  { SectionWrapper }  from "../../hoc";
 
-const ServiceCard = ( index, title, icon ) => {
+const ServiceCard = ( {index, title, icon} ) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
-      <motion.dev
+      <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="w-full green-pink-gradient 
         p-[1px] rounded-[20px] shadow-card"
@@ -32,7 +32,7 @@ const ServiceCard = ( index, title, icon ) => {
           >
             {title}</h3>
         </div>
-      </motion.dev>
+      </motion.div>
     </Tilt>
   );
 };
@@ -65,7 +65,7 @@ const About = () => {
 
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} /> //spread operator is a convenient way to pass all properties of an object as props to a React component. It's especially useful when you have an object with many properties and you want to avoid writing out each property individually.
+          <ServiceCard key={service.title} index="index" {...service} /> //spread operator is a convenient way to pass all properties of an object as props to a React component. It's especially useful when you have an object with many properties and you want to avoid writing out each property individually.
         ))}
       </div>
     </>

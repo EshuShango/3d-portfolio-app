@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 // import   ErrorBoundary   from "./utils/index";
 // import { ModelField } from "./components/ModelField";
 import {
-  // About,
+  About,
   Contact,
   Experience,
   Feedbacks,
@@ -22,7 +22,7 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
-        {/* <About /> */}
+        <About />
         <Experience />
         <Tech />
         <Works />

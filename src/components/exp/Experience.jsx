@@ -17,16 +17,7 @@ import { textVariant } from "../../utils/motion";
 //     return <div key={exp.id}>{exp.id}</div>;
 //   }
 // };
-export const ExperienceCard = ({
-  experience,
-  iconBg,
-  date,
-  icon, 
-  company,
-  title,
-  company_name,
-  points,
-}) => (
+export const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{ background: "#1d1836", color: "#fff" }}
     contentArrowStyle={{ borderRight: "7px solid #232631" }}
@@ -59,28 +50,19 @@ export const ExperienceCard = ({
     </div>
 
     <ul className="mt-5 list-disc ml-5 space-y-2">
-      {console.log(experiences)}
-      {console.log(experience)}
-      {/* ? safe navigation operators */}
-      {/* 
-     
-      {expPoints(experiences)} 
-      experience?.points?.map
-      */}
-      {experiences.map(
-        (experiences, index) => (
-          console.log("HEY"),
-          console.log(index),
-          (
-            <li
-              key={index}
-              className="text-white-100 text-[14px] pl-1 tracking-wider"
-            >
-              {index}
-            </li>
-          )
-        )
-      )}
+      {/* {console.log(experiences)} */}
+      {/* {console.log(experience)} */}
+      {/* {expPoints(experiences)}  */}
+      {experience.points.map((point, index) => (
+        // console.log("HEY"),
+        // console.log(index),
+        <li
+          key={index}
+          className="text-white-100 text-[14px] pl-1 tracking-wider"
+        >
+          {point}
+        </li>
+      ))}
     </ul>
   </VerticalTimelineElement>
 );
