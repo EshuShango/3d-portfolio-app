@@ -20,7 +20,7 @@ const ServiceCard = ( {index, title, icon} ) => {
           options={{
             max: 25, // max tilt rotation (degrees)
             scale: 1, // 2 = 200%, 1.5 = 150%, etc..
-            speed: 450, // Speed of the enter/exit transition
+            speed: 700, // Speed of the enter/exit transition
           }}
           className="bg-tertiary rounded-[20px] py-5 px-12
         min-h-[280px] flex justify-evenly items-center flex-col"

@@ -67,7 +67,7 @@ export const ExperienceCard = ({ experience }) => (
   </VerticalTimelineElement>
 );
 
-const Experience = () => {
+export const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
