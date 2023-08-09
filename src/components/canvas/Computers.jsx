@@ -4,8 +4,10 @@ import { Canvas } from "@react-three/fiber";
 // import { ModelField } from "../ModelField";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import {CanvasLoader} from "../../utils/Loader";
+import { Exp } from "../Exp";
 
-const Computers = (useMobile) => {
+const Computers = () => {
+  
   const computer = useGLTF("./laptop/laptop/scene.gltf");
   return (
     <mesh>
@@ -28,14 +30,14 @@ const Computers = (useMobile) => {
     </mesh>
   );
 };
-const ComputersCanvas = () => {
+const ComputersCanvas = (props) => {
 
   
   return (
     <Canvas
       frameloop="demand"
       
-      camera={{ position: [60, -100, 50], fov: 50 }}
+      camera={{ position: [60, 100, 50], fov: 50 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       
@@ -48,10 +50,10 @@ const ComputersCanvas = () => {
           minPolarAngle={Math.PI / 2}
         />
         
-        <Computers useMobile={useMobile} />
+        {/* <Computers useMobile={useMobile} /> */}
         
       </Suspense>
-      
+        <Exp props={{props}} usedMobile={useMobile} />
 
       <Preload all />
     </Canvas>

@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import { ComputersCanvas } from "../canvas";
+import { Exp } from "../Exp";
 
-const Hero = () => {
+const Hero = (props) => {
   return (
     <section
       className="relative w-full h-screen
@@ -38,6 +39,7 @@ const Hero = () => {
       </div>
 
       <ComputersCanvas />
+      {/* <Exp section={{props}} className="z-10"/> */}
 
       <div
         className="absolute xs:bottom-10

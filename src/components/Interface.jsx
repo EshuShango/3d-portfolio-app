@@ -23,7 +23,7 @@ const Section = (props) => {
   return <section className="h-screen w-screen p-8 max-w-screen-2xl mx-auto flex flex-col items-start justify-center " >{children}</section>;
 };
 
-export const Interface = () => {
+export const Interface = (props) => {
   const [section, setSection] = useState(0);
   return (
     <div className=" flex flex-col items-center w-full">
@@ -34,8 +34,8 @@ export const Interface = () => {
           <Section>
           {/* <div className=" bg-cover bg-no-repeat bg-center"> */}
         <Navbar />
+        
         <Hero />
-        <Exp section={section}/>
       {/* </div> */}
           </Section>
           <Section>

@@ -22,11 +22,11 @@ const { animation } = props;
   // load the model
   const { nodes, materials } = useGLTF("model/Portfolio_Avatar.glb");
   // load the animations
-  const { animations: sitting } = useFBX("/src/assets/animations/Sitting.fbx");
-  const { animations: typing } = useFBX("/src/assets/animations/Typing.fbx");
-  const { animations: falling } = useFBX("/src/assets/animations/Falling.fbx");
-  const { animations: standing } = useFBX("/src/assets/animations/Standing.fbx");
-  const { animations: looking } = useFBX("/src/assets/animations/Looking.fbx");
+  const { animations: sitting } = useFBX("/animations/Sitting.fbx");
+  const { animations: typing } = useFBX("/animations/Typing.fbx");
+  const { animations: falling } = useFBX("/animations/Falling.fbx");
+  const { animations: standing } = useFBX("/animations/Standing.fbx");
+  const { animations: looking } = useFBX("/animations/Looking.fbx");
 
   sitting[0].name = "Sitting";
   typing[0].name = "Typing";
