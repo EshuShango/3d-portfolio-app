@@ -15,43 +15,48 @@ import {
   Works,
   StarsCanvas,
 } from "../components";
+import { Avatar } from "../components/Avatar";
+import { Exp  } from "../components/Exp";
+import { useControls } from "leva";
 const Section = (props) => {
   const {children} = props;
   return <section className="h-screen w-screen p-8 max-w-screen-2xl mx-auto flex flex-col items-start justify-center " >{children}</section>;
 };
 
 export const Interface = () => {
+  const [section, setSection] = useState(0);
   return (
     <div className=" flex flex-col items-center w-full">
 
-    <BrowserRouter>
+    <BrowserRouter >
     <div className="relative z-0 bg-primary">
      
           <Section>
           {/* <div className=" bg-cover bg-no-repeat bg-center"> */}
         <Navbar />
         <Hero />
+        <Exp section={section}/>
       {/* </div> */}
           </Section>
           <Section>
             <About />
           </Section>
-          
+          {/* <Section>
             <Experience />
-          
+          </Section> */}
           <Section>
             <Tech />
           </Section>
           <Section>
             <Works />
           </Section>
-          <Section>
+          {/* <Section>
             <Feedbacks />
-          </Section>
+          </Section> */}
           <Section>
              {/* <div className="relative z-0 "> */}
         <Contact />
-        <StarsCanvas />
+        {/* <StarsCanvas /> */}
       {/* </div> */}
           </Section>
     </div>

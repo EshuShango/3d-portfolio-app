@@ -17,41 +17,42 @@ import { Scroll, ScrollControls } from "@react-three/drei";
 //   StarsCanvas,
 // } from "./components";
 import { Interface } from "./components/Interface";
+// import { Experience } from "./components";
 // import { MotionConfig } from "framer-motion";
 
 const App = () => {
-
   // const [section, setSection] = useState(0);
 
   return (
-  
-
-
-    <Interface />
-    // <BrowserRouter>
+    <>
     
-    //     <div className="relative z-0 bg-primary">
-    //       <div className=" bg-cover bg-no-repeat bg-center">
-    //         <Navbar />
-    //         <Hero />
-    //       </div>
-    //       <About />
-    //       <Experience />
-    //       <Tech />
-    //       <Works />
-    //       <Feedbacks />
-    //       <div className="relative z-0 ">
-    //         <Contact />
-    //         <StarsCanvas />
-    //       </div>
-    //     </div>
-      
-    //  </BrowserRouter>  
-   
+    <Interface />
+  
+    </>
   );
 };
 
 export default App;
+
+// <BrowserRouter>
+
+//     <div className="relative z-0 bg-primary">
+//       <div className=" bg-cover bg-no-repeat bg-center">
+//         <Navbar />
+//         <Hero />
+//       </div>
+//       <About />
+//       <Experience />
+//       <Tech />
+//       <Works />
+//       <Feedbacks />
+//       <div className="relative z-0 ">
+//         <Contact />
+//         <StarsCanvas />
+//       </div>
+//     </div>
+
+//  </BrowserRouter>
 
 // q: what does SOLID stand for?
 // a: SOLID is an acronym for the first five object-oriented design (OOD) principles by Robert C. Martin (also known as Uncle Bob).

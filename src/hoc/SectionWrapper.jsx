@@ -1,4 +1,7 @@
 // import React from "react"
+// import { BrowserRouter } from "react-router-dom";
+import { Canvas } from "@react-three/fiber";
+import { Scroll, ScrollControls } from "@react-three/drei";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -7,26 +10,31 @@ import { staggerContainer } from "../utils/motion";
 const SectionWrapper = (Component, idName) =>
   function HOC() {
     return (
-      <motion.section
-        variant={staggerContainer()}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
-        className={`${styles.padding} max-w-7xl
+      
+        
+            <motion.section
+              variant={staggerContainer()}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.25 }}
+              className={`${styles.padding} max-w-7xl
       mx-auto relative z-0`}
-      >
-        <span className="hash-span" id={idName}>
-          &nbsp;
-        </span>
-        <Component />
-      </motion.section>
+            >
+              <span className="hash-span" id={idName}>
+                &nbsp;
+              </span>
+              <Component />
+            </motion.section>
+          
+      
+    
     );
   };
 
 export default SectionWrapper;
 
-//* This code exports a Higher Order Component (HOC) called SectionWrapper. 
-// The HOC takes two arguments, a component and an idName. 
+//* This code exports a Higher Order Component (HOC) called SectionWrapper.
+// The HOC takes two arguments, a component and an idName.
 // The HOC returns a function that renders a motion section with the given component and idName.
 
 //^ Step by step explanation:
