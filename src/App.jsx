@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
 import { Scroll, ScrollControls } from "@react-three/drei";
-// import  {MotionConfig}  from "framer-motion-3d";
 // import   {ErrorBoundary}   from "./utils/index";
 // import { ModelField } from "./components/ModelField";
 // import {
@@ -17,17 +16,40 @@ import { Scroll, ScrollControls } from "@react-three/drei";
 //   StarsCanvas,
 // } from "./components";
 import { Interface } from "./components/Interface";
+import { motion, MotionConfig } from "framer-motion";
+import { Exp } from "./components/Exp";
+import { ScrollManager } from "./components/ScrollManager";
 // import { Experience } from "./components";
 // import { MotionConfig } from "framer-motion";
 
 const App = () => {
-  // const [section, setSection] = useState(0);
+  const [section, setSection] = useState(0);
+  const [menu, setMenu] = useState(false);
 
   return (
     <>
-    
-    <Interface  />
-  
+      {/* <MotionConfig
+        transition={{
+          type: "spring",
+          mass: 5,
+          stiffness: 500,
+          damping: 50,
+          restDelta: 0.0001,
+        }}
+      > */}
+        {/* <Canvas camera={{ position: [3,3,3], fov: 50}}> */}
+          {/* <ScrollControls pages={5} damping={.5}> */}
+            {/* <ScrollManager section={section} onSectionChange={setSection}/> */}
+            {/* <Scroll > */}
+              {/* <ambientLight intensity={0.5} /> */}
+              {/* <Exp  /> */}
+            {/* </Scroll> */}
+            {/* <Scroll html> */}
+              <Interface />
+            {/* </Scroll> */}
+          {/* </ScrollControls> */}
+        {/* </Canvas> */}
+      {/* </MotionConfig> */}
     </>
   );
 };

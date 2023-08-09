@@ -1,14 +1,18 @@
 import React from "react";
 import { Tilt } from "react-tilt";
+import { PresentationControls } from "@react-three/drei";
 import { motion } from "framer-motion";
 
 import { styles } from "../../styles";
 import { services } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
-import  { SectionWrapper }  from "../../hoc";
+import { SectionWrapper } from "../../hoc";
+import { Canvas } from "@react-three/fiber";
 
-const ServiceCard = ( {index, title, icon} ) => {
+const ServiceCard = ({ index, title, icon }) => {
   return (
+    
+
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
@@ -30,10 +34,13 @@ const ServiceCard = ( {index, title, icon} ) => {
             className="text-white text-[20px]
           font-bold text-center"
           >
-            {title}</h3>
+            {title}
+          </h3>
         </div>
       </motion.div>
     </Tilt>
+  
+    
   );
 };
 
@@ -71,6 +78,5 @@ const About = () => {
     </>
   );
 };
-
 
 export default SectionWrapper(About, "about"); //utilizing higher order function by wrapping this component with SectionWrapper and passing in the About component and the idName of "about" as arguments

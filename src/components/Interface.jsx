@@ -16,27 +16,29 @@ import {
   StarsCanvas,
 } from "../components";
 import { Avatar } from "../components/Avatar";
-import { Exp  } from "../components/Exp";
+import { Exp } from "../components/Exp";
 import { useControls } from "leva";
 const Section = (props) => {
-  const {children} = props;
-  return <section className="h-screen w-screen p-8 max-w-screen-2xl mx-auto flex flex-col items-start justify-center " >{children}</section>;
+  const { children } = props;
+  return (
+    <section className="h-screen w-screen p-8 max-w-screen-2xl mx-auto flex flex-col items-start justify-center ">
+      {children}
+    </section>
+  );
 };
 
 export const Interface = (props) => {
   const [section, setSection] = useState(0);
   return (
     <div className=" flex flex-col items-center w-full">
-
-    <BrowserRouter >
-    <div className="relative z-0 bg-primary">
-     
+      <BrowserRouter>
+        <div className="relative z-0 bg-primary">
           <Section>
-          {/* <div className=" bg-cover bg-no-repeat bg-center"> */}
-        <Navbar />
-        
-        <Hero />
-      {/* </div> */}
+            {/* <div className=" bg-cover bg-no-repeat bg-center"> */}
+            <Navbar />
+          
+            <Hero />
+            {/* </div> */}
           </Section>
           <Section>
             <About />
@@ -54,17 +56,13 @@ export const Interface = (props) => {
             <Feedbacks />
           </Section> */}
           <Section>
-             {/* <div className="relative z-0 "> */}
-        <Contact />
-        {/* <StarsCanvas /> */}
-      {/* </div> */}
+            {/* <div className="relative z-0 "> */}
+            <Contact />
+            {/* <StarsCanvas /> */}
+            {/* </div> */}
           </Section>
+        </div>
+      </BrowserRouter>
     </div>
-    </BrowserRouter>  
-    </div>
-    
-    
-  )
-}
-
-
+  );
+};
