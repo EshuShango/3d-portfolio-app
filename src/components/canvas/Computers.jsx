@@ -6,30 +6,30 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import {CanvasLoader} from "../../utils/Loader";
 import { Exp } from "../Exp";
 
-const Computers = () => {
+// const Computers = () => {
   
-  const computer = useGLTF("./laptop/laptop/scene.gltf");
-  return (
-    <mesh>
-      <hemisphereLight intensity={0.15} groundColor="black" />
-      <pointLight intensity={1} />
-      <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={5}
-        intensity={.5}
-        castShadow
-        shadow-mapSize-width={1024}
-      />
-      <primitive
-        object={computer.scene}
-        scale={useMobile ? 0.7 : 0.75}
-        position={useMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
-      />
-    </mesh>
-  );
-};
+//   const computer = useGLTF("./laptop/laptop/scene.gltf");
+//   return (
+//     <mesh>
+//       <hemisphereLight intensity={0.15} groundColor="black" />
+//       <pointLight intensity={1} />
+//       <spotLight
+//         position={[-20, 50, 10]}
+//         angle={0.12}
+//         penumbra={5}
+//         intensity={.5}
+//         castShadow
+//         shadow-mapSize-width={1024}
+//       />
+//       <primitive
+//         object={computer.scene}
+//         scale={useMobile ? 0.7 : 0.75}
+//         position={useMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+//         rotation={[-0.01, -0.2, -0.1]}
+//       />
+//     </mesh>
+//   );
+// };
 const ComputersCanvas = (props) => {
 
   
@@ -52,8 +52,8 @@ const ComputersCanvas = (props) => {
         
         {/* <Computers useMobile={useMobile} /> */}
         
-      </Suspense>
         <Exp props={{props}} usedMobile={useMobile} />
+      </Suspense>
 
       <Preload all />
     </Canvas>

@@ -3,7 +3,7 @@ import { styles } from "../../styles";
 import { ComputersCanvas } from "../canvas";
 import { Exp } from "../Exp";
 
-const Hero = (props) => {
+const Hero = () => {
   return (
     <section
       className="relative w-full h-screen

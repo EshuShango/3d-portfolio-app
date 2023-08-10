@@ -25,7 +25,7 @@ export const ScrollManager = (props) => {
         isAnimating.current = false;
       },
     });
-  }, [section]);
+  }, data.el[section]);
 
   // This code is using the useFrame hook to perform some operations related to scrolling.
 
@@ -37,13 +37,15 @@ export const ScrollManager = (props) => {
 
   // Another conditional statement checks if the scrollData is greater than the last scroll position and if the current section is the first section (curSection === 0). If both conditions are true, the onSectionChange function is called with the argument 1. Otherwise, an arrow function that returns nothing is defined but not executed.
 
-  // Finally, there is a comparison between scrollData and a fraction (1 / (data.pages - 1)). If scrollData is less than both the last scroll position and the fraction, nothing happens.w
+  // Finally, there is a comparison between scrollData and a fraction (1 / (data.pages - 1)). If scrollData is less than both the last scroll position and the fraction, nothing happens.
+
+
+  
 
   useFrame(() => {
     const scrollData = data.scroll.current;
     // console.log(scrollData);
     const lastCurScroll = (lastScroll.current = scrollData);
-    // write as an arrow function
     isAnimating.current
       ? lastCurScroll
       : () => {

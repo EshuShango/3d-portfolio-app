@@ -4,17 +4,17 @@ import { Canvas } from "@react-three/fiber";
 import { Scroll, ScrollControls } from "@react-three/drei";
 // import   {ErrorBoundary}   from "./utils/index";
 // import { ModelField } from "./components/ModelField";
-// import {
-//   About,
-//   Contact,
-//   Experience,
-//   Feedbacks,
-//   Hero,
-//   Navbar,
-//   Tech,
-//   Works,
-//   StarsCanvas,
-// } from "./components";
+import {
+  About,
+  Contact,
+  Experience,
+  Feedbacks,
+  Hero,
+  Navbar,
+  Tech,
+  Works,
+  StarsCanvas,
+} from "./components";
 import { Interface } from "./components/Interface";
 import { motion, MotionConfig } from "framer-motion";
 import { Exp } from "./components/Exp";
@@ -24,57 +24,82 @@ import { ScrollManager } from "./components/ScrollManager";
 
 const App = () => {
   const [section, setSection] = useState(0);
-  const [menu, setMenu] = useState(false);
+  // const [menu, setMenu] = useState(false);
 
   return (
     <>
-      {/* <MotionConfig
-        transition={{
-          type: "spring",
-          mass: 5,
-          stiffness: 500,
-          damping: 50,
-          restDelta: 0.0001,
-        }}
-      > */}
-        {/* <Canvas camera={{ position: [3,3,3], fov: 50}}> */}
-          {/* <ScrollControls pages={5} damping={.5}> */}
-            {/* <ScrollManager section={section} onSectionChange={setSection}/> */}
-            {/* <Scroll > */}
-              {/* <ambientLight intensity={0.5} /> */}
-              {/* <Exp  /> */}
-            {/* </Scroll> */}
-            {/* <Scroll html> */}
-              <Interface />
-            {/* </Scroll> */}
-          {/* </ScrollControls> */}
-        {/* </Canvas> */}
-      {/* </MotionConfig> */}
+      {/* <BrowserRouter>
+        <div className="relative z-0 bg-primary">
+          <div className=" bg-cover bg-no-repeat bg-center">
+            <Navbar />
+            <Hero />
+          </div>
+          <About />
+          <Experience />
+          <Tech />
+          <Works />
+          <Feedbacks />
+          <div className="relative z-0 ">
+            <Contact />
+            <StarsCanvas />
+          </div>
+        </div>
+      </BrowserRouter> */}
+
+      {/* How to get full display of the website? */}
+
+        {/* <MotionConfig
+          transition={{
+            type: "spring",
+            mass: 5,
+            stiffness: 500,
+            damping: 50,
+            restDelta: 0.0001,
+          }}
+        > */}
+          {/* <Canvas camera={{ position: [3, 3, 3], fov: 50 }}> */}
+        <BrowserRouter>
+            <ScrollControls pages={5} damping={0.5}>
+              <ScrollManager section={section} onSectionChange={setSection} />
+              <Scroll>
+                <ambientLight intensity={0.5} />
+                <Exp />
+              </Scroll>
+              <Scroll html>
+                <Interface />
+                {/* <Interface style={{section}}/> */}
+              </Scroll>
+            </ScrollControls>
+      </BrowserRouter>
+          {/* </Canvas> */}
+        {/* </MotionConfig> */}
     </>
   );
 };
 
 export default App;
 
-// <BrowserRouter>
+{
+  /* <BrowserRouter>
 
-//     <div className="relative z-0 bg-primary">
-//       <div className=" bg-cover bg-no-repeat bg-center">
-//         <Navbar />
-//         <Hero />
-//       </div>
-//       <About />
-//       <Experience />
-//       <Tech />
-//       <Works />
-//       <Feedbacks />
-//       <div className="relative z-0 ">
-//         <Contact />
-//         <StarsCanvas />
-//       </div>
-//     </div>
+    <div className="relative z-0 bg-primary">
+      <div className=" bg-cover bg-no-repeat bg-center">
+        <Navbar />
+        <Hero />
+      </div>
+      <About />
+      <Experience />
+      <Tech />
+      <Works />
+      <Feedbacks />
+      <div className="relative z-0 ">
+        <Contact />
+        <StarsCanvas />
+      </div>
+    </div>
 
-//  </BrowserRouter>
+ </BrowserRouter> */
+}
 
 // q: what does SOLID stand for?
 // a: SOLID is an acronym for the first five object-oriented design (OOD) principles by Robert C. Martin (also known as Uncle Bob).

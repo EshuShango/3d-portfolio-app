@@ -20,7 +20,7 @@ export const Avatar = (props) => {
   // group of objects that make up the Avatar
   const group = useRef();
   // load the model
-  const { nodes, materials } = useGLTF("model/Portfolio_Avatar.glb");
+  const { nodes, materials } = useGLTF("/model/Portfolio_Avatar.glb");
   // load the animations
   const { animations: sitting } = useFBX("/animations/Sitting.fbx");
   const { animations: typing } = useFBX("/animations/Typing.fbx");
@@ -53,14 +53,23 @@ export const Avatar = (props) => {
   });
 
   // console.warn(actions)
+
   useEffect(() => {
     const curAction = actions[animation];
+    // const curAction = actions[animation];
+    // if (curAction) {
+    //   curAction.reset().fadeIn(0.5).play();
+    // } else {
+    //   console.warn(`Animation '${animation}' not found in actions.`);
+    //   console.log(curAction);
+    // }
+
     curAction
       ? curAction.reset().fadeIn(0.5).play()
       : (console.warn(`Animation '${animation}' not found in actions.`),
         console.log(curAction));
     return () => curAction.reset().fadeOut(0.5);
-  }, [actions,animation]);
+  }, [animation]);
 
   useEffect(() => {
     Object.values(materials).forEach((mat) => {
