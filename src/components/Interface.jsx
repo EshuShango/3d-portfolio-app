@@ -31,7 +31,7 @@ export const Section = (props) => {
 export const Interface = (props) => {
   const [section, setSection] = useState(0);
   return (
-    <Canvas camera={{ position: [3, 3, 3], fov: 50 }}> 
+    // <Canvas camera={{ position: [3, 3, 3], fov: 50 }}> 
     <div className=" flex flex-col items-center w-full">
       <BrowserRouter>
         <div className="relative z-0 bg-primary">
@@ -66,6 +66,6 @@ export const Interface = (props) => {
         </div>
       </BrowserRouter>
     </div>
-    </Canvas>
+    // </Canvas>
   );
 };

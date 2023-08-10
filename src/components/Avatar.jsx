@@ -5,8 +5,9 @@ Command: npx gltfjsx@6.2.10 public/model/Portfolio_Avatar.glb
 */
 import React, { useRef, useEffect } from "react";
 import { useAnimations, useFBX, useGLTF, Html } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
+import { useMotionValue, animate } from "framer-motion";
 
 import { useControls } from "leva";
 
@@ -39,6 +40,20 @@ export const Avatar = (props) => {
     group
   );
   // play animation
+
+  // const { viewport } = useThree();
+
+  // const cameraPosX = useMotionValue();
+  // const cameraLookAtX = useMotionValue();
+  // useEffect(() => {
+  //   animate(cameraPosX, menuOpened ? -5 : section === 0);
+  //   animate(cameraLookAtX, menuOpened ? 5 : section === 0);
+  // }, [menuOpened]);
+
+  // useFrame((state) => {
+  //   state.camera.position.x = cameraPosX.get();
+  //   state.camera.lookAt(cameraLookAtX.get(), 0, 0);
+  // });
 
   // console.warn(actions)
   useFrame((state) => {
@@ -76,8 +91,11 @@ export const Avatar = (props) => {
       mat.wireframe = wireframe;
     });
   });
-
+  console.warn('Nodes:', nodes);
+  console.log('Animations:', sitting, typing, falling, standing, looking);
+  
   return (
+    
     <group {...props} dispose={null} ref={group}>
       <group rotation-x={-Math.PI / 2}>
         <primitive object={nodes.Hips} />

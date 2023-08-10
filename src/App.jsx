@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { Canvas } from "@react-three/fiber";
-import { Scroll, ScrollControls } from "@react-three/drei";
+import { Canvas, extend} from "@react-three/fiber";
+import { Scroll, ScrollControls,  } from "@react-three/drei";
+extend({ Canvas, Scroll, ScrollControls });
 // import   {ErrorBoundary}   from "./utils/index";
 // import { ModelField } from "./components/ModelField";
+
 import {
   About,
   Contact,
@@ -22,7 +24,7 @@ import { ScrollManager } from "./components/ScrollManager";
 // import { Experience } from "./components";
 // import { MotionConfig } from "framer-motion";
 
-const App = () => {
+const App = (props) => {
   const [section, setSection] = useState(0);
   // const [menu, setMenu] = useState(false);
 
@@ -57,21 +59,21 @@ const App = () => {
             restDelta: 0.0001,
           }}
         > */}
+        {/* <BrowserRouter> */}
           {/* <Canvas camera={{ position: [3, 3, 3], fov: 50 }}> */}
-        <BrowserRouter>
-            <ScrollControls pages={5} damping={0.5}>
+            {/* <ScrollControls pages={7} damping={0.5}>
               <ScrollManager section={section} onSectionChange={setSection} />
-              <Scroll>
-                <ambientLight intensity={0.5} />
-                <Exp />
-              </Scroll>
-              <Scroll html>
-                <Interface />
+              <Scroll > */}
+                {/* <ambientLight intensity={0.5} /> */}
+                {/* <Exp /> */}
+              {/* </Scroll>
+              <Scroll html> */}
+                <Interface section={section} />
                 {/* <Interface style={{section}}/> */}
-              </Scroll>
-            </ScrollControls>
-      </BrowserRouter>
+              {/* </Scroll>
+            </ScrollControls> */}
           {/* </Canvas> */}
+      {/* </BrowserRouter> */}
         {/* </MotionConfig> */}
     </>
   );

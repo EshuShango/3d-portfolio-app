@@ -18,19 +18,19 @@ import { useEffect } from "react";
 export const Exp = (props) => {
   const { section, menuOpened, children } = props;
   
-  const { viewport } = useThree();
+  // const { viewport } = useThree();
 
-  const cameraPosX = useMotionValue();
-  const cameraLookAtX = useMotionValue();
-  useEffect(() => {
-    animate(cameraPosX, menuOpened ? -5 : section === 0);
-    animate(cameraLookAtX, menuOpened ? 5 : section === 0);
-  }, [menuOpened]);
+  // const cameraPosX = useMotionValue();
+  // const cameraLookAtX = useMotionValue();
+  // useEffect(() => {
+  //   animate(cameraPosX, menuOpened ? -5 : section === 0);
+  //   animate(cameraLookAtX, menuOpened ? 5 : section === 0);
+  // }, [menuOpened]);
 
-  useFrame((state) => {
-    state.camera.position.x = cameraPosX.get();
-    state.camera.lookAt(cameraLookAtX.get(), 0, 0);
-  });
+  // useFrame((state) => {
+  //   state.camera.position.x = cameraPosX.get();
+  //   state.camera.lookAt(cameraLookAtX.get(), 0, 0);
+  // });
   return (
     <>
       {/* <Canvas shadows camera={[-1.5, 2, 10]}> */}

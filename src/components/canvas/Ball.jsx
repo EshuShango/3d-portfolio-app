@@ -45,9 +45,9 @@ const BallCanvas = ({ icon }) => {
         <OrbitControls enableZoom={false} />
       </Suspense>
       <PresentationControls
-            config={{ mass: 2, tension: 500 }}
-            snap={{ mass: 4, tension: 750 }}
-            rotation={[1.75, 0.0005, 1.6 * Math.PI]}
+            config={{ mass: 2, tension: 500}}
+            snap={{ mass: 8, tension: 750 }}
+            // rotation={[5, , 9 * Math.PI]}
             polar={[-Math.PI / 1.6, Math.PI / 1.6]}
             azimuth={[-Math.PI / 1.6, Math.PI / 1.6]}
           >
