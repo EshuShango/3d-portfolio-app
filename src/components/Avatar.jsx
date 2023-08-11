@@ -80,7 +80,8 @@ export const Avatar = (props) => {
     // }
 
     curAction
-      ? curAction.reset().fadeIn(0.5).play()
+      ? (curAction.reset().fadeIn(0.5).play())
+      // ? curAction.reset().fadeIn(0.5).play()
       : (console.warn(`Animation '${animation}' not found in actions.`),
         console.log(curAction));
     return () => curAction.reset().fadeOut(0.5);

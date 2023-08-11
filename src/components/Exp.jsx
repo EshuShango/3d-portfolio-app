@@ -54,7 +54,7 @@ export const Exp = (props) => {
           <group position={[0.075, -25, 25]}>
             <directionalLight intensity={0.5} />
             <group scale={[-20, 20, 20]}>
-              <Avatar animation={section === 0 ? "Falling" : "Looking"} />
+              <Avatar animation={section === 0 ? "Falling" : "Standing"} />
             </group>
           </group>
         </PresentationControls>
