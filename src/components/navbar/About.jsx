@@ -9,6 +9,8 @@ import { fadeIn, textVariant } from "../../utils/motion";
 import { SectionWrapper } from "../../hoc";
 import { Canvas } from "@react-three/fiber";
 
+import { Section } from "../Interface";
+
 const ServiceCard = ({ index, title, icon }) => {
   return (
     
@@ -47,6 +49,9 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
+    <Section>
+
+    
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
@@ -75,6 +80,7 @@ const About = () => {
           <ServiceCard key={service.title} index="index" {...service} /> //spread operator is a convenient way to pass all properties of an object as props to a React component. It's especially useful when you have an object with many properties and you want to avoid writing out each property individually.
         ))}
       </div>
+      </Section>
     </>
   );
 };

@@ -9,6 +9,7 @@ import { styles } from "../../styles";
 import { experiences } from "../../constants";
 import { SectionWrapper } from "../../hoc";
 import { textVariant } from "../../utils/motion";
+import { Section } from "../Interface";
 
 // const expPoints = () => {
 //   // for(let index of experiences)
@@ -70,6 +71,7 @@ export const ExperienceCard = ({ experience }) => (
 export const Experience = () => {
   return (
     <>
+    <Section>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>What I have done so far</p>
         <h2 className={styles.sectionHeadText}>Work Experience.</h2>
@@ -82,6 +84,7 @@ export const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
+      </Section>
     </>
   );
 };

@@ -2,106 +2,64 @@ import React, { useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Canvas, extend} from "@react-three/fiber";
 import { Scroll, ScrollControls,  } from "@react-three/drei";
-extend({ Canvas, Scroll, ScrollControls });
+extend({ Scroll, ScrollControls });
 // import   {ErrorBoundary}   from "./utils/index";
 // import { ModelField } from "./components/ModelField";
 
-import {
-  About,
-  Contact,
-  Experience,
-  Feedbacks,
-  Hero,
-  Navbar,
-  Tech,
-  Works,
-  StarsCanvas,
-} from "./components";
+// import {
+//   About,
+//   Contact,
+//   Experience,
+//   Feedbacks,
+//   Hero,
+//   // Navbar,
+//   Tech,
+//   Works,
+//   StarsCanvas,
+// } from "./components";
 import { Interface } from "./components/Interface";
 import { motion, MotionConfig } from "framer-motion";
 import { Exp } from "./components/Exp";
 import { ScrollManager } from "./components/ScrollManager";
 // import { Experience } from "./components";
-// import { MotionConfig } from "framer-motion";
+// import { framerMotionConfig } from "./config";
 
-const App = (props) => {
+const App = () => {
   const [section, setSection] = useState(0);
   // const [menu, setMenu] = useState(false);
 
   return (
     <>
-      {/* <BrowserRouter>
-        <div className="relative z-0 bg-primary">
-          <div className=" bg-cover bg-no-repeat bg-center">
-            <Navbar />
-            <Hero />
-          </div>
-          <About />
-          <Experience />
-          <Tech />
-          <Works />
-          <Feedbacks />
-          <div className="relative z-0 ">
-            <Contact />
-            <StarsCanvas />
-          </div>
-        </div>
-      </BrowserRouter> */}
-
+    
       {/* How to get full display of the website? */}
 
+      
         {/* <MotionConfig
           transition={{
-            type: "spring",
-            mass: 5,
-            stiffness: 500,
-            damping: 50,
-            restDelta: 0.0001,
+            ...framerMotionConfig
           }}
         > */}
-        {/* <BrowserRouter> */}
-          {/* <Canvas camera={{ position: [3, 3, 3], fov: 50 }}> */}
-            {/* <ScrollControls pages={7} damping={0.5}>
+          <Canvas camera={{ position: [3, 3, 3], fov: 50 }}>
+            <ScrollControls pages={6} damping={0.5}>
               <ScrollManager section={section} onSectionChange={setSection} />
-              <Scroll > */}
+              <Scroll >
                 {/* <ambientLight intensity={0.5} /> */}
-                {/* <Exp /> */}
-              {/* </Scroll>
-              <Scroll html> */}
-                <Interface section={section} />
+                <Exp />
+              </Scroll>
+              <Scroll html>
+                <Interface  />
                 {/* <Interface style={{section}}/> */}
-              {/* </Scroll>
-            </ScrollControls> */}
-          {/* </Canvas> */}
-      {/* </BrowserRouter> */}
+              </Scroll>
+            </ScrollControls>
+          </Canvas>
         {/* </MotionConfig> */}
-    </>
+        </>
+      
   );
 };
 
 export default App;
 
-{
-  /* <BrowserRouter>
-
-    <div className="relative z-0 bg-primary">
-      <div className=" bg-cover bg-no-repeat bg-center">
-        <Navbar />
-        <Hero />
-      </div>
-      <About />
-      <Experience />
-      <Tech />
-      <Works />
-      <Feedbacks />
-      <div className="relative z-0 ">
-        <Contact />
-        <StarsCanvas />
-      </div>
-    </div>
-
- </BrowserRouter> */
-}
 
 // q: what does SOLID stand for?
 // a: SOLID is an acronym for the first five object-oriented design (OOD) principles by Robert C. Martin (also known as Uncle Bob).

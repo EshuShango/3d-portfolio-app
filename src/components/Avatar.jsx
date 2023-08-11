@@ -12,7 +12,7 @@ import { useMotionValue, animate } from "framer-motion";
 import { useControls } from "leva";
 
 export const Avatar = (props) => {
-  const { animation } = props;
+  const { animation, section, menuOpened } = props;
   const { headFollow, cursorFollow, wireframe } = useControls({
     headFollow: { value: false },
     cursorFollow: { value: false },
@@ -47,7 +47,7 @@ export const Avatar = (props) => {
   // const cameraLookAtX = useMotionValue();
   // useEffect(() => {
   //   animate(cameraPosX, menuOpened ? -5 : section === 0);
-  //   animate(cameraLookAtX, menuOpened ? 5 : section === 0);
+  //   animate(cameraLookAtX, menuOpened ? 5 : viewport.height);
   // }, [menuOpened]);
 
   // useFrame((state) => {
@@ -85,7 +85,7 @@ export const Avatar = (props) => {
       : (console.warn(`Animation '${animation}' not found in actions.`),
         console.log(curAction));
     return () => curAction.reset().fadeOut(0.5);
-  }, [animation]);
+  }, [actions,animation]);
 
   useEffect(() => {
     Object.values(materials).forEach((mat) => {
@@ -93,6 +93,7 @@ export const Avatar = (props) => {
     });
   });
   console.warn('Nodes:', nodes);
+  // console.warn(actions)
   console.log('Animations:', sitting, typing, falling, standing, looking);
   
   return (
