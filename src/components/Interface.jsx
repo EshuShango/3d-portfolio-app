@@ -35,19 +35,19 @@ export const Interface = () => {
     <div className=" flex flex-col items-center w-full">
       {/* <BrowserRouter> */}
       <div className="relative z-0 bg-primary">
-        <Section>
+        {/* <Section> */}
           {/* <div className=" bg-cover bg-no-repeat bg-center"> */}
           <Navbar />
 
           <Hero />
           {/* </div> */}
-        </Section>
-        <Section>
+        {/* </Section> */}
+        {/* <Section> */}
           <About />
-        </Section>
-        <Section>
+        {/* </Section> */}
+        {/* <Section> */}
           <Experience />
-        </Section>
+        {/* </Section> */}
         {/*<Section>
           <Tech />
         </Section>
