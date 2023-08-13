@@ -5,17 +5,17 @@ import { navLinks } from "../../constants";
 import { oluHigh2, menu, close } from "../../assets";
 // import {olu} from "../assets/olu.svg";
 
-const MenuButton = (props) => {
-  const { label, onClick } = props;
-  return (
-    <button
-      className="text-2xl font-bold cursor-pointer hover:text-indigo-600 transition-colors"
-      onClick={onClick}
-    >
-      {label}
-    </button>
-  );
-};
+// const MenuButton = (props) => {
+//   const { label, onClick } = props;
+//   return (
+//     <button
+//       className="text-2xl font-bold cursor-pointer hover:text-indigo-600 transition-colors"
+//       onClick={onClick}
+//     >
+//       {label}
+//     </button>
+//   );
+// };
 
 const Navbar = (props) => {
   const [active, setActive] = useState("");
@@ -31,6 +31,7 @@ const Navbar = (props) => {
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+      // !! nav is a bit off at the top of the page when scrolling
     >
       <div className=" w-full flex items-center justify-between max-w-7xl mx-auto">
         <Link
