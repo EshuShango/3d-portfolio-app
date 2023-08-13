@@ -26,7 +26,7 @@ const Hero = () => {
     >
       <div
         className={`${styles.paddingX} absolute 
-    inset-0 top-[120px] max-w-7xl mx-auto flex 
+    inset-4 top-[120px] max-w-7xl mx-auto flex 
     flex-row items-start gap-5 `}
       >
         <div
@@ -36,7 +36,7 @@ const Hero = () => {
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
-        <div>
+        <div className="px-1 italic font-extrabold leading-snug  backdrop-blur-[3px]">
           <h1
             className={`${styles.heroHeadText}
           text-white`}
@@ -105,13 +105,14 @@ const Hero = () => {
       </div>
 
       {/* <ComputersCanvas /> */}
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px] "
-      >
-        <EarthCanvas />
-      </motion.div>
 
+                <motion.div
+                  variants={slideIn("right", "tween", 0.2, 1)}
+                  className="h-full w-full "
+                  scale={[0.9, 0.9, 0.9]}
+                >
+                  <EarthCanvas />
+                </motion.div>
       <div
         className="absolute xs:bottom-10
         bottom-32 w-full flex  justify-center

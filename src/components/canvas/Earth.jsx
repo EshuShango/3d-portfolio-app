@@ -9,10 +9,12 @@ const Earth = () => {
   return (
     <primitive 
     object={earth.scene}
-    scale={2.5}
-    position-y={[-20]}
-    rotation-y={0}
+    scale={8.5}
     
+    position-y={-2}
+    position-z={5}
+    rotation-y={2}
+    // rotation-x={-6}
     />
   )
 };
@@ -23,24 +25,26 @@ const EarthCanvas = () => {
       shadows
       frameloop="demand"
       gl={{preserveDrawingBuffer: true}}
+      
       camera={{
-        fov: 45,
+        fov: 50,
         near: 0.9,
-        far:200,
-        position: [-2,3,6]
-
+        far: 1000,
+        // position: [12, 6, .6],
+        position: [20,-20,20]
       }}
+      className="  z-[-2]"
       >
         <Suspense fallback={ <CanvasLoader /> }>
-          {/* <OrbitControls
+          <OrbitControls
             autoRotate
             enableZoom={false}
-            // maxAzimuthAngle={Math.PI / 2}
-            // minAzimuthAngle={Math.PI / 2}
+            // maxAzimuthAngle={Math.PI / 3}
+            // minAzimuthAngle={Math.PI / 3}
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
-            /> */}
-             <PresentationControls
+            />
+             {/* <PresentationControls
         autoRotate
         config={{ mass: 2, tension: 500 }}
         snap={{ mass: 4, tension: 750 }}
@@ -48,10 +52,10 @@ const EarthCanvas = () => {
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}
         azimuth={[-Math.PI / 1.4, Math.PI / 2]}
-      >
-            <Earth useMobile={useMobile}  />
-            </PresentationControls>
+      > */}
           </Suspense>
+            <Earth useMobile={useMobile}  />
+            {/* </PresentationControls> */}
       </Canvas>
   )
 }

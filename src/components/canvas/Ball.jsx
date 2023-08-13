@@ -6,6 +6,7 @@ import {
   Decal,
   Float,
   OrbitControls,
+  PresentationControls,
   Preload,
   useTexture,
 } from "@react-three/drei";
@@ -43,9 +44,16 @@ const BallCanvas = ({ icon }) => {
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
       </Suspense>
+      <PresentationControls
+            config={{ mass: 2, tension: 500}}
+            snap={{ mass: 8, tension: 750 }}
+            // rotation={[5, , 9 * Math.PI]}
+            polar={[-Math.PI / 1.6, Math.PI / 1.6]}
+            azimuth={[-Math.PI / 1.6, Math.PI / 1.6]}
+          >
 
       <Ball imgUrl={icon} />
-
+    </PresentationControls>
       <Preload all />
     </Canvas>
   );
