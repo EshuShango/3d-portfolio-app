@@ -5,9 +5,22 @@ import { navLinks } from "../../constants";
 import { oluHigh2, menu, close } from "../../assets";
 // import {olu} from "../assets/olu.svg";
 
-const Navbar = () => {
+const MenuButton = (props) => {
+  const { label, onClick } = props;
+  return (
+    <button
+      className="text-2xl font-bold cursor-pointer hover:text-indigo-600 transition-colors"
+      onClick={onClick}
+    >
+      {label}
+    </button>
+  );
+};
+
+const Navbar = (props) => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const { onSectionChange, menuOpened, setMenuOpened, onClick, label } = props;
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -41,29 +54,59 @@ const Navbar = () => {
             <span className="sm:block hidden"> | Visioneer</span>
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+
+        <div className="flex flex-1 justify-end items-center">
+          <button
+            className="z-20    top-12  right-12 p-3 bg-indigo-600 
+      w-11 h-11 rounded-md"
+            onClick={() => setMenuOpened(!menuOpened)}
+          >
+            <div
+              className={`bg-black h-0.5 rounded-md w-full transition-all ${
+                menuOpened ? "rotate-45 translate-y-0.5" : " "
+              }`}
+            />
+            <div
+              className={`bg-black h-0.5 rounded-md w-full my-1 ${
+                menuOpened ? "hidden" : " "
+              }`}
+            />
+            <div
+              className={`bg-black h-0.5 rounded-md w-full transition-all ${
+                menuOpened ? "-rotate-45 " : " "
+              }`}
+            />
+          </button>
+        </div>
+
+        <div
+          className={`z-10 fixed top-0 right-0 bottom-0 backdrop-blur bg-indigo-500/50 transition-all overflow-hidden 
+            flex flex-col ${menuOpened ? "w-80" : "w-0"}`}
+        >
           {navLinks.map((link) => (
-            <li
+            <button
               key={link.id}
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px]
-                font-medium cursor-pointer`}
+              }  flex items-start justify-center flex-col gap-6 p-8 font-bold cursor-pointer hover:text-indigo-600 transition-colors`}
               onClick={() => setActive(link.title)}
             >
               <Link
                 to={`#${link.id}`}
                 onClick={() => {
+                  // onSectionChange(link.id)
                   setActive(link.title);
                   scrollToSection(link.id);
+                  setMenuOpened(!menuOpened)
                 }}
               >
                 {link.title}
               </Link>
-            </li>
+            </button>
           ))}
-        </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        </div>
+
+        {/* <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -73,11 +116,11 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-x1`}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-x2`}
           >
             <ul className="list-none flex justify-end items-start flex-col gap-4">
               {navLinks.map((link) => (
-                <li
+                <button
                   key={link.id}
                   className={`${
                     active === link.title ? "text-white" : "text-secondary"
@@ -96,11 +139,11 @@ const Navbar = () => {
                   >
                     {link.title}
                   </Link>
-                </li>
+                </button>
               ))}
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

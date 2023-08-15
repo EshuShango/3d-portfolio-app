@@ -1,17 +1,20 @@
 import { Suspense } from "react"
 import { Canvas } from "@react-three/fiber"
-import { OrbitControls, Preload, useGLTF  } from "@react-three/drei"
+import { OrbitControls, PresentationControls, Preload, useGLTF  } from "@react-three/drei"
 import {CanvasLoader} from "../../utils/Loader";
+import { useMobile } from "../../utils/isMobile";
 
 const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf")
   return (
     <primitive 
     object={earth.scene}
-    scale={2.5}
-    position-y={0}
-    rotation-y={0}
+    scale={8.5}
     
+    position-y={-2}
+    position-z={5}
+    rotation-y={2}
+    // rotation-x={-6}
     />
   )
 };
@@ -22,25 +25,37 @@ const EarthCanvas = () => {
       shadows
       frameloop="demand"
       gl={{preserveDrawingBuffer: true}}
+      
       camera={{
-        fov: 45,
-        near: 0.1,
-        far: 200,
-        position: [-4,3,6]
-
+        fov: 50,
+        near: 0.9,
+        far: 1000,
+        // position: [12, 6, .6],
+        position: [20,-20,20]
       }}
+      className="  z-[-2]"
       >
         <Suspense fallback={ <CanvasLoader /> }>
           <OrbitControls
             autoRotate
             enableZoom={false}
-            // maxAzimuthAngle={Math.PI / 2}
-            // minAzimuthAngle={Math.PI / 2}
+            // maxAzimuthAngle={Math.PI / 3}
+            // minAzimuthAngle={Math.PI / 3}
             maxPolarAngle={Math.PI / 2}
             minPolarAngle={Math.PI / 2}
             />
-            <Earth />
+             {/* <PresentationControls
+        autoRotate
+        config={{ mass: 2, tension: 500 }}
+        snap={{ mass: 4, tension: 750 }}
+        polar={[-Math.PI / 3, Math.PI / 3]}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI / 2}
+        azimuth={[-Math.PI / 1.4, Math.PI / 2]}
+      > */}
           </Suspense>
+            <Earth useMobile={useMobile}  />
+            {/* </PresentationControls> */}
       </Canvas>
   )
 }

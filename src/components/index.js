@@ -1,5 +1,6 @@
 import { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas } from './canvas';
 import Hero from './hero/Hero';
+import {Menu} from './Navbar copy/Menu';
 import Navbar from './navbar/Navbar';
 import About from './navbar/About';
 import Tech from './tech/Tech';
@@ -11,6 +12,7 @@ import Contact from './navbar/Contact';
 export {
   Hero,
   Navbar,
+  Menu,
   About,
   Tech,
   Experience,

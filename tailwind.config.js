@@ -20,6 +20,10 @@ export default  {
       },
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
+        // "hero-pattern": "color(white)",
+      },
+      backgroundColor: {
+        "bg-white": "white",
       },
     },
   },
