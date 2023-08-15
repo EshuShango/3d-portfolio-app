@@ -5,22 +5,22 @@ import { navLinks } from "../../constants";
 import { oluHigh2, menu, close } from "../../assets";
 // import {olu} from "../assets/olu.svg";
 
-const MenuButton = (props) => {
-  const { label, onClick } = props;
-  return (
-    <button
-      className="text-2xl font-bold cursor-pointer hover:text-indigo-600 transition-colors"
-      onClick={onClick}
-    >
-      {label}
-    </button>
-  );
-};
+// const MenuButton = (props) => {
+//   const { label, onClick } = props;
+//   return (
+//     <button
+//       className="text-2xl font-bold cursor-pointer hover:text-indigo-600 transition-colors"
+//       onClick={onClick}
+//     >
+//       {label}
+//     </button>
+//   );
+// };
 
 const Navbar = (props) => {
   const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
-  const { onSectionChange, menuOpened, setMenuOpened, onClick, label } = props;
+  // const [toggle, setToggle] = useState(false);
+  const {  menuOpened, setMenuOpened, } = props;
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -97,7 +97,7 @@ const Navbar = (props) => {
                   // onSectionChange(link.id)
                   setActive(link.title);
                   scrollToSection(link.id);
-                  setMenuOpened(!menuOpened)
+                  setMenuOpened(!menuOpened);
                 }}
               >
                 {link.title}

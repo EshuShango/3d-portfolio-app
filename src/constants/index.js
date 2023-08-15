@@ -55,61 +55,61 @@ export const projects = [
 
     tags: [
       {
-        name: "react",
+        name: "HTML",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "JavaScript",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "bootstrap",
         color: "pink-text-gradient",
       },
     ],
     image: weatherApp,
     source_code_link: "https://github.com/EshuShango/weather-forecast-app",
   },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  }
+  // {
+  //   name: "Job IT",
+  //   description:
+  //     "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+  //   tags: [
+  //     {
+  //       name: "react",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "restapi",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "scss",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: jobit,
+  //   source_code_link: "https://github.com/",
+  // }
 ];
 
 const services = [
   {
-    title: "Web Developer",
+    title: "FrontEnd-Web Development",
     icon: web,
   },
-  // {
-  //   title: "React Native Developer",
-  //   icon: mobile,
-  // },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Ai Enthusiast & Prompt Engineer",
+    icon: mobile,
   },
   // {
-  //   title: "Content Creator",
-  //   icon: creator,
+  //   title: "Backend Developer",
+  //   icon: backend,
   // },
+  {
+    title: "UI Ideation  ",
+    icon: creator,
+  },
 ];
 
 const technologies = [
@@ -125,10 +125,10 @@ const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
+  // {
+  //   name: "TypeScript",
+  //   icon: typescript,
+  // },
   {
     name: "React JS",
     icon: reactjs,

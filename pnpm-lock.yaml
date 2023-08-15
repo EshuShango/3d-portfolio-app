@@ -17,9 +17,15 @@ dependencies:
   framer-motion:
     specifier: ^10.12.18
     version: 10.12.18(react-dom@18.2.0)(react@18.2.0)
+  gsap:
+    specifier: ^3.12.2
+    version: 3.12.2
   maath:
     specifier: ^0.7.0
     version: 0.7.0(@types/three@0.155.0)(three@0.154.0)
+  proptypes:
+    specifier: ^1.1.0
+    version: 1.1.0
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -1733,6 +1739,10 @@ packages:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
     dev: true
 
+  /gsap@3.12.2:
+    resolution: {integrity: sha512-EkYnpG8qHgYBFAwsgsGEqvT1WUidX0tt/ijepx7z8EUJHElykg91RvW1XbkT59T0gZzzszOpjQv7SE41XuIXyQ==}
+    dev: false
+
   /has-bigints@1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==}
     dev: true
@@ -2387,6 +2397,10 @@ packages:
       loose-envify: 1.4.0
       object-assign: 4.1.1
       react-is: 16.13.1
+
+  /proptypes@1.1.0:
+    resolution: {integrity: sha512-589N0gHNvg6ocCDia1knxMwguEcZq1qyD8fVxFZEdZP0YKI+GTHyflsJH2mYE0YZbo1KNj5W8avdSR4iJDV+fw==}
+    dev: false
 
   /punycode@2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}

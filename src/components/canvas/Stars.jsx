@@ -15,6 +15,7 @@ const Stars = ({...props}) => {
     ref.current.rotation.y -= delta / 15;
   });
   return (
+    // eslint-disable-next-line react/no-unknown-property
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points ref={ref} positions={sphere} stride={3} frustrumCulled {...props}>
         <PointMaterial

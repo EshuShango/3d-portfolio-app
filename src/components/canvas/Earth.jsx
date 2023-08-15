@@ -53,9 +53,9 @@ const EarthCanvas = () => {
         minPolarAngle={Math.PI / 2}
         azimuth={[-Math.PI / 1.4, Math.PI / 2]}
       > */}
-          </Suspense>
             <Earth useMobile={useMobile}  />
             {/* </PresentationControls> */}
+          </Suspense>
       </Canvas>
   )
 }
