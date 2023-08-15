@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable react/prop-types */
 import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
@@ -5,9 +7,9 @@ import { motion } from "framer-motion";
 import { styles } from "../../styles";
 import { services } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
-import  { SectionWrapper }  from "../../hoc";
+import { SectionWrapper } from "../../hoc";
 
-const ServiceCard = ( {index, title, icon} ) => {
+const ServiceCard = ({ index, title, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
@@ -16,7 +18,6 @@ const ServiceCard = ( {index, title, icon} ) => {
         p-[1px] rounded-[20px] shadow-card"
       >
         <div
-          // eslint-disable-next-line react/no-unknown-property
           options={{
             max: 25, // max tilt rotation (degrees)
             scale: 1, // 2 = 200%, 1.5 = 150%, etc..
@@ -30,7 +31,8 @@ const ServiceCard = ( {index, title, icon} ) => {
             className="text-white text-[20px]
           font-bold text-center"
           >
-            {title}</h3>
+            {title}
+          </h3>
         </div>
       </motion.div>
     </Tilt>
@@ -56,21 +58,19 @@ const About = () => {
         <br></br>
         <br></br>
         Among other things, I consider myself a Software Constructor experienced
-        in JavaScript and TypeScript. I have worked with frameworks like Node,
-        Express, and React, and I'm always eager to learn more. Passionate about
+        in JavaScript. I have worked with frameworks like NodeJS, Express, MongoDB and ReactJS, I&apos;m always eager to learn more. Passionate about
         applying new technologies, I embrace creativity in various aspects. Life
         experiences have taught me adaptability, and my unique problem-solving
-        approach sets me apart.🚀💻🎨
+        approach sets me apart from the usual. Yet still able to work in a team, fostering a collaborative environment. 
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
-          <ServiceCard key={service.title} index="index" {...service} /> //spread operator is a convenient way to pass all properties of an object as props to a React component. It's especially useful when you have an object with many properties and you want to avoid writing out each property individually.
+          <ServiceCard key={service.title} index={index} {...service} /> //spread operator is a convenient way to pass all properties of an object as props to a React component. It's especially useful when you have an object with many properties and you want to avoid writing out each property individually.
         ))}
       </div>
     </>
   );
 };
-
 
 export default SectionWrapper(About, "about"); //utilizing higher order function by wrapping this component with SectionWrapper and passing in the About component and the idName of "about" as arguments

@@ -83,9 +83,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          I have worked on a wide range of projects, from small to large scale.
-          Following projects showcases my skills and exp through real world
-          applications.
+          While my journey as a software engineer is still unfolding, I&apos;ve already made significant strides. Notably, my portfolio exemplifies my evolving skills and burgeoning expertise through tangible real-world applications. With each project I undertake, I&apos;m steadily refining my craft and embracing the opportunity to contribute to the world of software driven solutions.
         </motion.p>
       </div>
 
@@ -100,4 +98,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "work");
