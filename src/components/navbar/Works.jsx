@@ -81,9 +81,9 @@ const Works = () => {
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="mt-3 text-secondary text-[22px] max-w-3xl leading-[30px]"
         >
-          While my journey as a software engineer is still unfolding, I&apos;ve already made significant strides. Notably, my portfolio exemplifies my evolving skills and burgeoning expertise through tangible real-world applications. With each project I undertake, I&apos;m steadily refining my craft and embracing the opportunity to contribute to the world of software driven solutions.
+          While my journey as a Software Constructor is still unfolding & growing, I&apos;ve already made significant strides. Notably, my portfolio exemplifies my evolving skills and burgeoning expertise through tangible real-world applications. With each project I undertake, I&apos;m steadily refining my craft and embracing the opportunity to contribute to the world of software driven solutions.
         </motion.p>
       </div>
 
