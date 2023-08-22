@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { slideIn } from "../../utils/motion";
 import { styles } from "../../styles";
 
-
 const Hero = () => {
   // const [active, setActive] = useState("");
   // const scrollToSection = (sectionId) => {
@@ -92,7 +91,7 @@ const Hero = () => {
         <EarthCanvas />
       </motion.div>
       <div
-        className="absolute xs:bottom-10
+        className="flex-0  xs:bottom-10 xs:hidden md:flex 
         bottom-32 w-full flex  justify-center
         items-center"
       >

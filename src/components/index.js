@@ -4,7 +4,7 @@ import {Menu} from './Navbar copy/Menu';
 import Navbar from './navbar/Navbar';
 import About from './navbar/About';
 import Tech from './tech/Tech';
-import Experience from './exp/Experience';
+// import Experience from './exp/Experience';
 import Works from './navbar/Works';
 import Feedbacks from './feedbacks/Feedbacks';
 import Contact from './navbar/Contact';
@@ -15,7 +15,7 @@ export {
   Menu,
   About,
   Tech,
-  Experience,
+  // Experience,
   Works,
   Feedbacks,
   Contact,

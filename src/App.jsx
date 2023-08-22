@@ -4,7 +4,7 @@ import { useState } from "react";
 import {
   About,
   Contact,
-  Experience,
+  // Experience,
   // Feedbacks,
   Hero,
   Navbar,
@@ -31,7 +31,7 @@ const App = () => {
           <StarsCanvas />
         </div>
         <About section={section} menuOpened={menuOpened} />
-        <Experience />
+        {/* <Experience /> */}
         <Tech section={section} menuOpened={menuOpened} />
         <Works section={section} menuOpened={menuOpened} />
         {/* <Feedbacks /> */}

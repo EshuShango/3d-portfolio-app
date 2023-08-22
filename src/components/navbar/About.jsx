@@ -54,22 +54,8 @@ const About = () => {
       >
         Combining tech, art, and humane interaction for a better world 💛🦾🌱
         <br></br>
-        <br></br> 👁️&quot;Visioneer&quot;: is a role that essentially, combines
-        an artistic Director&apos;s artistic vision with a CTO&apos;s
-        technological skills.
         <br></br>
-        <br></br>
-        🧠⚡️&quot;Brain-Stormer&quot;: an individual whom is effective in the
-        process of ideation-curation-prototyping
-        <br></br>
-        <br></br>
-        Visioneers are architects of ideas who seamlessly blend creativity and
-        technology. This role requires perceiving the big picture, arranging its
-        details, and enhancing value at each stage. Visioneer&apos;s drive
-        innovation by turning ideas into engaging and meaningful solutions.
-        <br></br>
-        <br></br>
-        I consider myself a 👁️&quot;Visioneer&quot; & 🧠⚡️&quot;Brain-Stormer&quot;; <br></br> Yet I&apos;m always eager to learn more. Passionate about applying new
+        I&apos;m always eager to learn more. Passionate about applying new
         technologies, I embrace creativity in various aspects. While Life
         experiences have taught me adaptability, and my unique problem-solving
         approach sets me apart from the usual. I&apos;m still able to work in a
