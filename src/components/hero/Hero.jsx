@@ -91,7 +91,7 @@ const Hero = () => {
         <EarthCanvas />
       </motion.div>
       <div
-        className="flex-0  xs:bottom-10 xs:hidden md:flex 
+        className="flex-0  xs:bottom-10 xs:hidden md:hidden
         bottom-32 w-full flex  justify-center
         items-center"
       >

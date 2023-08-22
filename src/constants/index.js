@@ -20,7 +20,7 @@ import {
   starbucks,
   tesla,
   shopify,
-  weatherApp,
+quotegenapp,
   jobit,
   tripguide,
   threejs,
@@ -49,9 +49,9 @@ Check your data in projects constants to verify.
 */
 export const projects = [
   {
-    name: "Weather Forecast App",
+    name: "Quote Generator App",
     description:
-      "Web application that allows user to search the weather forecast for a specific city.",
+      "A delightful quote generator that brings inspiration to your day. It is built with HTML, CSS, and JavaScript. It uses an API to generate quotes. It also allows you to share the quote on 𝕏 (Twitter).",
 
     tags: [
       {
@@ -63,12 +63,12 @@ export const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "bootstrap",
+        name: "CSS",
         color: "pink-text-gradient",
       },
     ],
-    image: weatherApp,
-    source_code_link: "https://github.com/EshuShango/weather-forecast-app",
+    image: quotegenapp,
+    source_code_link: "https://github.com/EshuShango/js_qoute_gen",
   },
   // {
   //   name: "Job IT",

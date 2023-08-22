@@ -6,7 +6,7 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-import weatherApp from "./weatherApp.png";
+import quotegenapp from "./quotegenapp.png";
 import olu from "./olu.svg";
 import oluHigh from "./oluHigh.svg";
 import oluHigh2 from "./oluHigh2.svg";
@@ -69,5 +69,5 @@ export {
   carrent,
   jobit,
   tripguide,
-  weatherApp,
+  quotegenapp,
 };
